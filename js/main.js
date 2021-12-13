@@ -13,6 +13,15 @@
 function createSelectOptions(params) {
     if (!params) return undefined;
         // map and return the params
+        let options = [];
+        for (let i = 0; i < params.length; i++) {
+            let option = document.createElement('OPTION');
+            option.value = params[i].id;
+            option.textContent = params[i].name;
+            options.push(options)
+        }
+        return options;
+        /*
         return params.map((x) => {
             let options = [];
             let option = document.createElement('option')
@@ -21,6 +30,7 @@ function createSelectOptions(params) {
             options.push(option);
             return options;
         });
+        */
  }
 
 function toggleCommentSection(postId) {
