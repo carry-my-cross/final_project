@@ -18,7 +18,7 @@ function createSelectOptions(params) {
             let option = document.createElement('option')
             option.value = x.id;
             option.textContent = x.name;
-            
+            return option;
         });
         console.dir(new_options); // debug - remove 
         return params.map((x) => {
