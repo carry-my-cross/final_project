@@ -49,7 +49,10 @@ function toggleCommentButton (postID) {
 
 
 function deleteChildElements(parentElement) {
-    if (!/<\/?[a-z][\s\S]*>/i.test(parentElement)) console.log('not html')
+    if (!/<\/?[a-z][\s\S]*>/i.test(parentElement)) {
+        console.dir(parentElement)
+        console.log('not html')
+    }
     if (!parentElement || !parentElement instanceof Element || !parentElement instanceof HTMLDocument) return undefined;
     let child = parentElement.lastElementChild;
     while (child) {
