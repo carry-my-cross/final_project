@@ -11,7 +11,7 @@
 
 
 function createSelectOptions(params) {
-    if (!params) return undefined;
+    if (!params) return 'undefined';
         // map and return the params
         return params.map((x) => x.option);
  }
