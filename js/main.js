@@ -20,6 +20,7 @@ function createSelectOptions(params) {
             option.textContent = params[i].name;
             options.push(options)
         }
+        console.dir(options); // debug - remove 
         return options;
         /*
         return params.map((x) => {
