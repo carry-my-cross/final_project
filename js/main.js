@@ -13,20 +13,12 @@
 function createSelectOptions(params) {
     if (!params) return undefined;
         // map and return the params
-        let new_options = params.map((x) => {
-            let options = [];
-            let option = document.createElement('option')
-            option.value = x.id;
-            option.textContent = x.name;
-            return option;
-        });
-        console.dir(new_options); // debug - remove 
         return params.map((x) => {
             let options = [];
             let option = document.createElement('option')
             option.value = x.id;
             option.textContent = x.name;
-            
+            return option;
         });
         
  }
