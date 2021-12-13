@@ -42,7 +42,7 @@ function toggleCommentButton (postID) {
 
 
 function deleteChildElements(parentElement) {
-    if (!parentElement) return undefined;
+    if (!parentElement || !parentElement instanceof Element || !parentElement instanceof HTMLDocument) return undefined;
     let child = parentElement.lastElementChild;
     while (child) {
         parentElement.removeChild(child);
