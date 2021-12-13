@@ -15,10 +15,11 @@ function createSelectOptions(params) {
         // map and return the params
         return params.map((x) => {
             let options = [];
-            let option =  document.createElement(x.option)
+            let option = document.createElement('option')
             option.value = x.id;
             option.textContent = x.name;
-            options.push(option)
+            options.push(option);
+            return options;
         });
  }
 
