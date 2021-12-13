@@ -17,7 +17,7 @@ function createSelectOptions(params) {
  }
 
 function toggleCommentSection(postId) {
-    if (!postId || !postId instanceof Element || !postId instanceof HTMLDocument || postId typeof 'string') return undefined;
+    if (!postId instanceof Element || !postId instanceof HTMLDocument) return undefined;
     let section = document.querySelector(`section[data-post-id="${postId}"]`);
     if (section) {
         // toggle on hide
