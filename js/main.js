@@ -17,6 +17,7 @@ function createSelectOptions(params) {
  }
 
 function toggleCommentSection(postId) {
+    if (!postId) return undefined;
     let section = document.querySelector(`section[data-post-id="${postId}"]`);
     if (section) {
         // toggle on hide
@@ -41,6 +42,7 @@ function toggleCommentButton (postID) {
 
 
 function deleteChildElements(parentElement) {
+    if (!parentElement) return undefined;
     let child = parentElement.lastElementChild;
     while (child) {
         parentElement.removeChild(child);
