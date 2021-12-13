@@ -13,7 +13,13 @@
 function createSelectOptions(params) {
     if (!params) return undefined;
         // map and return the params
-        return params.map((x) => x.option);
+        return params.map((x) => {
+            let options = [];
+            let option =  document.createElement(x.option)
+            option.value = x.id;
+            option.textContent = x.name;
+            options.push(option)
+        });
  }
 
 function toggleCommentSection(postId) {
