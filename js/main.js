@@ -13,25 +13,22 @@
 function createSelectOptions(params) {
     if (!params) return undefined;
         // map and return the params
-        let options = [];
-        for (let i = 0; i < params.length; i++) {
-            let option = document.createElement('OPTION');
-            option.value = params[i].id;
-            option.textContent = params[i].name;
-            options.push(options)
-        }
-        console.dir(options); // debug - remove 
-        return options;
-        /*
+        let new_options = params.map((x) => {
+            let options = [];
+            let option = document.createElement('option')
+            option.value = x.id;
+            option.textContent = x.name;
+            
+        });
+        console.dir(new_options); // debug - remove 
         return params.map((x) => {
             let options = [];
             let option = document.createElement('option')
             option.value = x.id;
             option.textContent = x.name;
-            options.push(option);
-            return options;
+            
         });
-        */
+        
  }
 
 function toggleCommentSection(postId) {
