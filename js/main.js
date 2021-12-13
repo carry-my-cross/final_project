@@ -15,7 +15,7 @@ function createSelectOptions(params) {
         // map and return the params
         return params.map((x) => {
             let options = [];
-            let option =  document.createElement(x.option)
+            let option =  document.createElement(option, x.option)
             option.value = x.id;
             option.textContent = x.name;
             options.push(option)
