@@ -99,7 +99,7 @@ function createComments(comments) {
       for (let i = 0; i < comments.length; i++) {
         let comment = comments[i];
         
-        let a = document.createElement("a");
+        let a = document.createElement("ARTICLE");
         let h3 = createElemWithText("h3", comment.name);
         let p1 = createElemWithText("p", comment.body);
         // Create an paragraph element with createElemWithText('p', `From: ${comment.email}`)
