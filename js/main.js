@@ -119,24 +119,21 @@ function createComments(comments) {
 
 
  function populateSelectMenu(users) {
-        if (!users) {
-          return undefined;
-        }
-        //  b. Receives the users JSON data as a parameter
-        //  c. Selects the #selectMenu element by id
-        let selectMenu = document.getElementById("selectMenu");
-        //  d. Passes the users JSON data to createSelectOptions()
-        //  e. Receives an array of option elements from createSelectOptions
-        let options = createSelectOptions(user);
-        //  f. Loops through the options elements and appends each option element to the select menu
+        // if users is empty, return undefined
+        if (!users) return;
+        // select the selectMenu id
+        let menu = document.querySelector("#selectMenu");
+        // passes the data to createSelectOptions to get an array
+        let options = createSelectOptions(users);
+
+        // loop through and append each option to the menu
         for (let i = 0; i < options.length; i++) {
-          const o = options[i];
-          let option = document.createElement("option");
-          option.innerText = o;
-          selectMenu.appendChild(option);
-        }
-        //  g. Return the selectMenu element
-        return selectMenu;
+            let option = options[i];
+            menu.append(option);
+        } // end for loop
+
+        // return menu
+        return menu;
       }
 
 
